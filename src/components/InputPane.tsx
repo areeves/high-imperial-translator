@@ -3,6 +3,7 @@ import React from 'react';
 interface InputPaneProps {
     inputText: string;
     onInputChange: (text: string) => void;
+    onTranslate: (text: string) => void;
 }
 
 const InputPane: React.FC<InputPaneProps> = ({ inputText, onInputChange }) => {
