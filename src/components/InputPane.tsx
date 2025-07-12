@@ -9,7 +9,7 @@ interface InputPaneProps {
 const InputPane: React.FC<InputPaneProps> = ({ inputText, onInputChange, onTranslate }) => {
     return (
         <div style={{ padding: '20px', flex: 1 }}>
-            <h2>Input</h2>
+            <h2>English</h2>
             <textarea
                 value={inputText}
                 onChange={(e) => onInputChange(e.target.value)}

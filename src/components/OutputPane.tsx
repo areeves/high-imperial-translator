@@ -7,7 +7,7 @@ interface OutputPaneProps {
 const OutputPane: React.FC<OutputPaneProps> = ({ outputText }) => {
     return (
         <div style={{ padding: '20px', border: '1px solid #ccc', height: '100%', overflowY: 'auto' }}>
-            <h2>Translated Output</h2>
+            <h2>High Imperial</h2>
             <pre>{outputText}</pre>
         </div>
     );
