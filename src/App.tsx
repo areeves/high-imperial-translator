@@ -10,8 +10,25 @@ const App: React.FC = () => {
             <button onClick={() => setShowConfig(true)} style={{ position: 'absolute', top: 16, right: 16, zIndex: 10 }}>
                 Open Configuration
             </button>
-            {showConfig && <ConfigPane onClose={() => setShowConfig(false)} />}
-            {!showConfig && <SplitView />}
+            {/* Always render SplitView */}
+            <SplitView />
+            {/* Render ConfigPane as overlay if showConfig is true */}
+            {showConfig && (
+                <div style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100vw',
+                    height: '100vh',
+                    background: 'rgba(0,0,0,0.3)',
+                    zIndex: 1000,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                }}>
+                    <ConfigPane onClose={() => setShowConfig(false)} />
+                </div>
+            )}
         </div>
     );
 };
