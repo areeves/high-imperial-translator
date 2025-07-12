@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/High-Imperial-Translator/static/css/main.31d6cfe0.css",
-    "main.js": "/High-Imperial-Translator/static/js/main.dd414cf7.js",
-    "index.html": "/High-Imperial-Translator/index.html",
-    "main.dd414cf7.js.map": "/High-Imperial-Translator/static/js/main.dd414cf7.js.map"
+    "main.css": "/high-imperial-translator/static/css/main.31d6cfe0.css",
+    "main.js": "/high-imperial-translator/static/js/main.dd414cf7.js",
+    "index.html": "/high-imperial-translator/index.html",
+    "main.dd414cf7.js.map": "/high-imperial-translator/static/js/main.dd414cf7.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
