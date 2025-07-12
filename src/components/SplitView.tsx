@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import InputPane from './InputPane';
 import OutputPane from './OutputPane';
 import { fetchTranslation } from '../api/openai';
+import { useAppConfig } from '../hooks/useAppConfig';
 
 const SplitView: React.FC = () => {
+    const { config } = useAppConfig();
     const [inputText, setInputText] = useState<string>('');
     const [outputText, setOutputText] = useState<string>('');
 
@@ -13,7 +15,6 @@ const SplitView: React.FC = () => {
 
     const handleTranslation = async (inputText: string) => {
         try {
-            const config = JSON.parse(localStorage.getItem('appConfig') || '{}');
             const apiKey = config.apiKey || '';
             if (!apiKey) {
                 setOutputText('API key not set. Please configure it first.');

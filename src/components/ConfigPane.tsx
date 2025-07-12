@@ -1,28 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useAppConfig } from '../hooks/useAppConfig';
 
 interface ConfigPaneProps {
   onClose: () => void;
 }
 
-const CONFIG_KEY = 'appConfig';
-
 const ConfigPane: React.FC<ConfigPaneProps> = ({ onClose }) => {
-  const [apiKey, setApiKey] = useState('');
+  const { config, setConfigValue } = useAppConfig();
+  const [apiKey, setApiKey] = useState(config.apiKey || '');
   const [language, setLanguage] = useState('en');
 
   useEffect(() => {
-    const stored = localStorage.getItem(CONFIG_KEY);
-    if (stored) {
-      try {
-        const config = JSON.parse(stored);
-        if (config.apiKey) setApiKey(config.apiKey);
-      } catch {}
-    }
-  }, []);
+    setApiKey(config.apiKey || '');
+  }, [config.apiKey]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    localStorage.setItem(CONFIG_KEY, JSON.stringify({ apiKey }));
+    setConfigValue('apiKey', apiKey);
     onClose();
   };
 
