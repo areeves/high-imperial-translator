@@ -16,14 +16,13 @@ const ConfigPane: React.FC<ConfigPaneProps> = ({ onClose }) => {
       try {
         const config = JSON.parse(stored);
         if (config.apiKey) setApiKey(config.apiKey);
-        if (config.language) setLanguage(config.language);
       } catch {}
     }
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    localStorage.setItem(CONFIG_KEY, JSON.stringify({ apiKey, language }));
+    localStorage.setItem(CONFIG_KEY, JSON.stringify({ apiKey }));
     onClose();
   };
 
@@ -34,13 +33,6 @@ const ConfigPane: React.FC<ConfigPaneProps> = ({ onClose }) => {
         <div style={{ marginBottom: 16 }}>
           <label htmlFor="apiKey">API Key:</label>
           <input id="apiKey" name="apiKey" type="text" style={{ width: '100%' }} value={apiKey} onChange={e => setApiKey(e.target.value)} />
-        </div>
-        <div style={{ marginBottom: 16 }}>
-          <label htmlFor="language">Language:</label>
-          <select id="language" name="language" style={{ width: '100%' }} value={language} onChange={e => setLanguage(e.target.value)}>
-            <option value="en">English</option>
-            <option value="hi">High Imperial</option>
-          </select>
         </div>
         <button type="submit">Save</button>
         <button type="button" onClick={onClose} style={{ marginLeft: 8 }}>Cancel</button>
