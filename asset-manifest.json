@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/high-imperial-translator/static/css/main.31d6cfe0.css",
-    "main.js": "/high-imperial-translator/static/js/main.dd414cf7.js",
+    "main.js": "/high-imperial-translator/static/js/main.1e196fc2.js",
     "index.html": "/high-imperial-translator/index.html",
-    "main.dd414cf7.js.map": "/high-imperial-translator/static/js/main.dd414cf7.js.map"
+    "main.1e196fc2.js.map": "/high-imperial-translator/static/js/main.1e196fc2.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.dd414cf7.js"
+    "static/js/main.1e196fc2.js"
   ]
 }
