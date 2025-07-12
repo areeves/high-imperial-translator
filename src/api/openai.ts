@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 
 export const fetchTranslation = async (inputText: string, apiKey: string): Promise<string> => {
     try {
-        const openai = new OpenAI({ apiKey });
+        const openai = new OpenAI({ apiKey, dangerouslyAllowBrowser: true });
         const response = await openai.chat.completions.create({
             model: 'gpt-3.5-turbo',
             messages: [{ role: 'user', content: inputText }],
