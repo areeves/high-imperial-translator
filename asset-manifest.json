@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/high-imperial-translator/static/css/main.31d6cfe0.css",
-    "main.js": "/high-imperial-translator/static/js/main.1e196fc2.js",
+    "main.css": "/high-imperial-translator/static/css/main.6a0b1747.css",
+    "main.js": "/high-imperial-translator/static/js/main.f229a912.js",
     "index.html": "/high-imperial-translator/index.html",
-    "main.1e196fc2.js.map": "/high-imperial-translator/static/js/main.1e196fc2.js.map"
+    "main.6a0b1747.css.map": "/high-imperial-translator/static/css/main.6a0b1747.css.map",
+    "main.f229a912.js.map": "/high-imperial-translator/static/js/main.f229a912.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.1e196fc2.js"
+    "static/css/main.6a0b1747.css",
+    "static/js/main.f229a912.js"
   ]
 }
