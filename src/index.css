@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.4);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+  resize: none;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #ffed4e;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ffed4e;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+h2 {
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.config-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  background: linear-gradient(45deg, #4a90e2, #357abd);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+}
+
+.split-view {
+  display: flex;
+  height: 100vh;
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.pane {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+..input-pane {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.output-pane {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-textarea {
+  width: 100%;
+  resize: none;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.translate-button {
+  margin-top: auto;
+  width: 100%;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: #fff;
+  height: 48px;
+}
+
+.output-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-pre {
+  width: 100%;
+  resize: none;
+  margin-bottom: 20px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #ffd700;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.dummy-spacer {
+  height: 48px;
+  margin-top: auto;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.config-modal {
+  max-width: 500px;
+  width: 90%;
+}
+
+.config-content {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border: 2px solid #ffd700;
+}
+
+.config-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.save-button {
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+.cancel-button {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+}

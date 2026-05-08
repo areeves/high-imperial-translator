@@ -8,19 +8,20 @@ interface InputPaneProps {
 
 const InputPane: React.FC<InputPaneProps> = ({ inputText, onInputChange, onTranslate }) => {
     return (
-        <div style={{ padding: '20px', flex: 1 }}>
-            <h2>English</h2>
+        <div className="input-container">
+            <h2>English Input</h2>
             <textarea
                 value={inputText}
                 onChange={(e) => onInputChange(e.target.value)}
-                rows={10}
-                style={{ width: '100%', resize: 'none' }}
+                rows={15}
+                className="input-textarea"
+                placeholder="Enter English text to translate..."
             />
             <button
-                style={{ marginTop: '10px', width: '100%' }}
+                className="translate-button"
                 onClick={() => onTranslate(inputText)}
             >
-                Submit
+                🔄 Translate to High Imperial
             </button>
         </div>
     );

@@ -21,16 +21,27 @@ const ConfigPane: React.FC<ConfigPaneProps> = ({ onClose }) => {
   };
 
   return (
-    <div style={{ padding: 24, background: '#fff', borderRadius: 8, maxWidth: 400, margin: '40px auto', boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}>
-      <h2>Configuration</h2>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: 16 }}>
-          <label htmlFor="apiKey">API Key:</label>
-          <input id="apiKey" name="apiKey" type="text" style={{ width: '100%' }} value={apiKey} onChange={e => setApiKey(e.target.value)} />
-        </div>
-        <button type="submit">Save</button>
-        <button type="button" onClick={onClose} style={{ marginLeft: 8 }}>Cancel</button>
-      </form>
+    <div className="config-modal">
+      <div className="config-content">
+        <h2>⚙️ Configuration</h2>
+        <form onSubmit={handleSubmit} className="config-form">
+          <div className="form-group">
+            <label htmlFor="apiKey">OpenAI API Key:</label>
+            <input
+              id="apiKey"
+              name="apiKey"
+              type="password"
+              value={apiKey}
+              onChange={e => setApiKey(e.target.value)}
+              placeholder="Enter your OpenAI API key"
+            />
+          </div>
+          <div className="button-group">
+            <button type="submit" className="save-button">💾 Save</button>
+            <button type="button" onClick={onClose} className="cancel-button">❌ Cancel</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
